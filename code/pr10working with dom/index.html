@@ -1,0 +1,70 @@
+<!DOCTYPE html><html>
+    <head>
+        <title>working with dom</title>
+        <!-- <link rel=¨stylesheet¨ type=¨text/css¨ href=¨style.css¨> -->
+<style>
+    .box {
+    width: 200px;
+    height: 200px;
+    background-color: #e9e9e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 3s ;
+    cursor: pointer;
+  }
+  
+  /* .box:hover {
+    transform: scale(1.1);
+  } */
+  
+  .box img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .box p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .box:hover img {
+    filter: grayscale(100%);
+  }
+  
+  .box:hover p {
+    color: #ff0000;
+  }
+  
+</style>
+    </head>
+    <body>
+        <div class="box" id="box1">
+            <!-- <img src="image1.jpg" alt="Image 1"> -->
+            <p>Box 1</p>
+          </div>
+          
+          <div class="box" id="box2">
+            <!-- <img src="image2.jpg" alt="Image 2"> -->
+            <p>Box 2</p>
+          </div>
+          
+          <div class="box" id="box">
+            <img src="image3.jpg" alt="Box Image">
+            <p>Box 1</p>
+          </div>
+          <button onclick="renderBoxes()">Render Boxes</button>
+
+          <!-- <div class="box" id="box3">
+            <img src="" alt="Box Image">
+            <p>Box 1</p> -->
+            <!-- <button id="btn" onclick="main()">Click me!</button> -->
+          <!-- </div> -->
+          
+          <script src="index.js"></script>          
+    </body>
+    </html>

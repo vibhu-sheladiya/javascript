@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+    <link rel="stylesheet" href="./cdn.jsdelivr.net_npm_bootstrap@5.0.2_dist_css_bootstrap.min.css">
+    
+
+</head>
+<body>
+    <div class="container ">
+        <form action="">
+            <input type="text" class="form-control" id="indata">
+        </form>
+        <div class=" row mb-3">
+            <div class="col-3">
+                <button type="button" class="btn btn-secondary form-control" onclick="indata.value += '1'">1</button>
+            </div>
+<div class="col-3">
+    <button type="button" class="btn btn-secondary form-control " onclick="indata.value += '2'">2</button>
+</div>
+<div class="col-3">
+
+    <button type="button" class="btn btn-secondary form-control" onclick="indata.value += '3'">3</button>
+</div>
+<div class="col-3">
+
+    <button type="button" class="btn btn-secondary form-control" onclick="indata.value += '+'">+</button>
+</div>
+       </div>
+        <div class=" row mb-3">
+           <div class="col-3">
+            <button type="button" class="btn btn-secondary form-control" onclick="indata.value += '4'">4</button>
+            </div>
+            <div class="col-3">
+            <button type="button" class="btn btn-secondary form-control" onclick="indata.value += '5'">5</button>
+            </div>
+            <div class="col-3">
+            <button type="button" class="btn btn-secondary form-control" onclick="indata.value += '6'">6</button>
+            </div>
+            <div class="col-3">
+            <button type="button" class="btn btn-secondary form-control" onclick="indata.value += '-'">-</button>
+
+            </div>
+       </div>
+        <div class=" row mb-3">
+           <div class="col-3">
+            <button type="button" class="btn btn-secondary form-control" onclick="indata.value += '7'">7</button>
+            </div>
+            <div class="col-3">
+            <button type="button" class="btn btn-secondary form-control" onclick="indata.value += '8'">8</button>
+            </div>
+            <div class="col-3">
+            <button type="button" class="btn btn-secondary form-control" onclick="indata.value += '9'">9</button>
+            </div>
+            <div class="col-3">
+            <button type="button" class="btn btn-secondary form-control" onclick="indata.value += '*'">*</button>
+
+            </div>
+       </div>
+        <div class=" row mb-3">
+           <div class="col-3">
+            <button type="button" class="btn btn-secondary form-control" onclick="indata.value = ''">ac</button>
+            </div>
+            <div class="col-3">
+            <button type="button" class="btn btn-secondary form-control" onclick="indata.value += '/'">/</button>
+            </div>
+            <div class="col-3">
+            <button type="button" class="btn btn-secondary form-control" onclick="indata.value += '%'">%</button>
+            </div>
+            <div class="col-3">
+            <button type="button" class="btn btn-secondary form-control" onclick=" indata.value = eval(indata.value)">=</button>
+
+            </div>
+       </div>
+      
+    </div>
+    
+    <script>
+        let indata=document.getElementById("indata")
+    </script>
+
+</body>
+</html>

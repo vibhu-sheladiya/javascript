@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>  ARRAY ITERATION</title> 
+    </head>
+     <script>
+//         The item value
+// The item index
+// The array itself -->
+//            
+
+// ==========================================================================
+//    ------------------------MAP()-------------------------------------
+            //  map():- create a new array by performing a function on each array element,
+            //           does not execute the function for array elements without values,
+                        //    does not change the original array 
+let ary=[11,4,9,16,100,55,77,55,45,33];
+let b=ary.map(test);
+document.write("using simple map with normal function:"+" "+b+"<br>");
+
+function test(x){
+    return x*10;
+}
+
+// -----------------------------------------------------------------------
+let ary1=[{
+    name:'ram',age:24},
+{name:'geeta',age: 22},
+{name:'naina',age:20}
+];
+let c=ary1.map(test1);
+//    line no:-30 to 32 forEach()
+//   forEach:-(loop chalse) calls a function (a callback function) once for each array element
+c.forEach(function(str){
+    document.write(str+"<br>");
+})
+
+document.write(c+"<br>");
+
+function test1(c){
+    return c.name+ " "+c.age;
+}
+
+// ==================================================================================
+//  --------------------------------------Map() with split-----------------
+ let student=["ram","sita","janki","jay","bolo","hanuman"];
+ student=student.map((k)=>{
+    return k.split('');
+ })
+ document.write(student+"<br>");
+
+//  ===================================================================================
+// ---------------------------------filter()-------------
+                // * creates a new array with array elements that pass a test(check krse ane true hse to j value return krse)
+                
+let a2=ary.filter((a)=>{
+    return a<10
+})
+console.log(a2);
+document.write(a2+"<br>");
+
+
+// ==================================================================================
+// ------------------------------------reduce()-------------------
+//                      addition krse peli and second value
+let a3=ary.reduce((h1,h2)=>{
+    return h1+ h2
+})
+document.write(a3+"<br>");
+
+// ====================================================================================
+// ------------------------------------every()--------------------
+              // all value ka to big hovi jove ka to small hovi joye ka to quval(=) hovi joye
+let a4=ary.every((num1,num2)=>{
+// return num1 >=16  // ans:-false
+ return num2 <=100  // ans: true
+});
+document.write(a4+"<br>")
+
+
+// ====================================================================================
+// ------------------------------------some()--------------------
+//           existing array mathi koi pan one value/condition  throw check thai ne true ke false ni value jova mate 
+//           koi pan aek 16 thi moti k nani hovi joye
+
+let a5=ary.some((num1)=>{
+return num1 >=16  // ans:-true
+//  return num1 <=100  // ans: true
+//  return num1>=4   //ans: true
+});
+document.write(a5+"<br>")
+
+// ====================================================================================
+// ------------------------------------indexOf()--------------------
+// indexOf("search item",start)
+// search krine index value return krse
+
+let a6=ary.indexOf(55);
+document.write(a6+"<br>");
+
+
+
+// ====================================================================================
+// ------------------------------------lastIndexOf()--------------------
+// last thi check krse
+// way of direction(right thi chalu krse left sudhi jase)
+
+let a7=ary.lastIndexOf(16);
+document.write(a7+"<br>");
+
+// ====================================================================================
+// ------------------------------------find()--------------------
+// array ma all value check krvani no need bcz je first value mle ane te check thy ne return kre
+
+
+let a8=ary.find((srch)=>{
+  return srch >=9;
+});
+document.write(a8+"<br>");
+
+// ====================================================================================
+// ------------------------------------findIndex()--------------------
+//    find() jevu j che but return/output ma je first var ma condition check kri ne true krse aeni index value return krse
+let a9=ary.findIndex((srchi)=>{
+  return srchi >=77;
+});
+document.write(a9+"<br>");
+
+// ====================================================================================
+// ------------------------------------includes()--------------------
+//  capital letter ma check kre same hoy value to true kre other wise false(casesensitive)
+
+let s=["sanjay","ram","rima","Doli","sohil"];
+let a11=s.includes("doli");
+document.write(a11+"<br>");
+
+let a12=s.includes("Doli");
+document.write(a12+"<br>");
+
+let a10=ary.includes(55);
+document.write(a10+"<br>");
+
+
+ </script>
+    <body></body>
+</html>

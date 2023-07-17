@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Web Page</title>
+  <script>
+    var originalTitle = document.title;
+
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) {
+        // User switched to another tab
+        document.title = "Come back!"; // Change the title when the tab is not visible
+      } else {
+        // User switched back to the tab
+        document.title = originalTitle; // Restore the original title
+      }
+    });
+  </script>
+</head>
+<body>
+  <!-- Your webpage content here -->
+</body>
+</html>
+    

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+</head>
+
+<body>
+  <h2>CONSTRUCTOR</h2>
+  <h3>PLEASE OPEN CONSOLE AND THEN YOU CAN CHECK OR SEE OUTPUT</h3>
+ <script>
+function personAdd(first,course,age,lan){
+    this.name =first,
+    this.course=course,//this method
+    this.age=age,
+    this.language=lan
+}
+// carete new key word using create new object 
+const personAdd1= new personAdd('vibhu','Guj',23);//upr je index wise nakhi hoy te j nakhvi pde 
+const personAdd2= new personAdd('keshav','react',34);//new key word
+personAdd.city='bhavnagr';//add properties
+console.log(personAdd2.name);//access name with new key word with object constructor
+console.log(personAdd1);//ful object get
+console.log(personAdd1.age);
+console.log(personAdd.city);
+
+
+function person(name,course,age,language){
+    this.name ='vibhu',
+    this.course='react',
+    this.age=23,
+    this.language='eng'
+}
+// carete new key word using create newe object
+const person1= new person();
+const person2= new person();
+console.log(person1.name);
+console.log(person1);//full object get
+console.log(person2.age);
+
+const   otherperson={
+first:'vibhu',
+lname:'joe',
+language:'No',
+set lang(value){//accessors method set and get
+    this.language=value;
+}
+};
+otherperson.lang="Eng";
+console.log("hi",otherperson.language);
+
+const   otherperson1={
+first:'vibhu',
+lname:'joe',
+language:'No',
+get lang(){
+    this.language;
+}
+};
+otherperson1.lang="Eng";
+// console.log("hi",otherperson1.language);
+
+// Define an object
+const obj = {counter : 0};
+// Define Setters and Getters
+Object.defineProperty(obj, "reset", {
+  get : function () {this.counter = 0;}
+});
+Object.defineProperty(obj, "increment", {
+  get : function () {this.counter++;}
+});
+Object.defineProperty(obj, "decrement", {
+  get : function () {this.counter--;}
+});
+Object.defineProperty(obj, "add", {
+  set : function (value) {this.counter += value;}
+});
+Object.defineProperty(obj, "subtract", {
+  set : function (value) {this.counter -= value;}
+});
+// Play with counter:
+obj.reset;
+obj.add = 5;
+obj.subtract = 1;
+obj.increment;
+obj.decrement;
+console.log(obj.counter)
+
+
+
+
+
+    </script>
+</body>
+
+</html>

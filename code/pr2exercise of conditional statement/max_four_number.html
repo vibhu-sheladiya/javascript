@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>9. find max of 4 number using nested if </title> 
+    </head>
+    <script>
+ 
+// ================================================================
+// ----->>>>
+
+
+
+        //get the input value
+        var a = prompt("Ente value of A :");
+        var b = prompt("Ente value of B :");
+        var c = prompt("Ente value of C :");
+        var d = prompt("Ente value of D :");
+
+        // Perform the operations & Output the result
+        if (a > b) {
+            if (a > c) {
+                if (a > d) {   
+                        document.write("<h2>A is big</h2> number is  :"  + a ); 
+                     }
+                else  { 
+                        document.write("<h2>D is big</h2> number is  :"  + d );   
+                    } 
+                }   
+            else { 
+                if (c > d) { 
+                        document.write("<h2>C is big</h2> number is  :"  + c ); 
+                    }
+                else { 
+                        document.write("<h2>D is big</h2> number is  :" + d );    
+                    }   
+                }
+            }                
+        else {
+            if (b > c) {
+                if (b > d) {
+                        document.write("<h2>B is big</h2> number is  :" + b );
+                    }
+                else {
+                        document.write("<h2>D is big</h2> number is  :" + d );
+                    }
+                    }
+            else {
+                if (c > d) {
+                        document.write("<h2>C is big</h2> number is  :" + c);
+                    }
+                else {
+                        document.write("<h2>D is big</h2> number is  :" + d);
+                    }
+                }
+            }        
+
+    </script>
+
+<body></body>
+
+</html>

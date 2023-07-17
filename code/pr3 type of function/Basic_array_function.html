@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>pr:-3 TYPE OF FUNCTION</title>
+
+
+    </head>
+   
+     <script>
+
+        // ===> NORMAL (auto  render function) FUNCTION
+//  ====> SYNTAX:- function functionName(){----}
+  
+   function myTask(){
+    let a=4;
+    let b=5;
+    let c= a+b;
+    document.write("a is:"+a+" "+"b is:"+b+" "+"the sum is"+c+"<br>");
+   }
+   myTask()
+ 
+//    =================================================================
+// ------------------parameterized function-----------------------------------------------------
+ 
+//  ========> SYNTAX:- function functionName(parameter1,parameter2){---}   
+//  calling step:- functionName(parameter1,parameter2)
+
+
+  // *****************function with parameter without return****************************************************
+function myWork(name,age){
+document.write("function with parameter without return:-"+"   "+name+" "+age+" "+"<br>");
+}
+myWork("haresh",44);
+
+// ======================================================================
+//   ********************function with parameter with return**********************************************
+
+let result = myTest(4, 3);
+function myTest(p1,p2){
+  return p1 * p2;
+}
+document.write(result+"<br>")
+
+// ======================================================
+// ***********************page is render function********************************************************************
+function myTask1(){
+    // document.write("welcome to the next click")
+    let a=4;
+    let b=5;
+    let c= a*b;
+    document.write("a is:"+a+" "+"b is:"+b+" "+"the sum is"+c+"<br>");
+   }
+  
+</script>
+<body>
+    <!-- function myTask(){ -->
+     <button type="button" onclick="myTask1()">CLICK ME</button>
+         <!-- <p id = "para">Click me</p>   -->
+     </body>
+   
+</html>

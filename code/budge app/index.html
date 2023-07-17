@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="nav-text">
+        <h2 id="text-Budget">
+          Budget
+        </h2>
+      </div>
+    </div>
+  </header>
+
+  <div id="innBnt" class="d-flex">
+    <div class="container">
+      <div class="col-12 addCla">
+        <input type="text" id="AddBudgetInput" placeholder="Add Budget for Your Bank" required> <br>
+        <input type="submit" id="AddBudgetBtn" onclick="AddBudgetBtn()" value="Add Budget">
+      </div>
+      <div class="col-12 addCla">
+        <input type="hidden" id="storeid">
+        <input type="text" id="ExTetx" placeholder="Enter Your Product Details"> <br>
+        <input type="text" id="ExTetx1" placeholder="Enter Your Product Price"> <br>
+        <input type="submit" id="s" onclick="AddProBtn()" value="Expense">
+        <input type="submit" id="u" style="display: none;" onclick="update()" value="Update">
+      </div>
+    </div>
+  </div>
+
+  <div id="Dis">
+    <div id="DisTotalBudget" class="container">
+      <div id="TotalShow" class="total-section">
+        <h3>Total Budget</h3>
+        <span id="t0">0</span>
+        <button id="ExAdd" onclick="ExAdd()">Add Amount</button>
+      </div>
+      <div id="ExTotal" class="total-section">
+        <h3>Expense</h3>
+        <span id="t1">0</span>
+      </div>
+      <div id="CurrantBudget" class="total-section">
+        <h3 onclick="show()">Current Budget</h3>
+        <span id="t2">0</span>
+        <button id="ExAdd" onclick="show()">Refresh Curent Budget</button> 
+      </div>
+    </div>
+  </div>
+
+  <table>
+    <tr>
+      <th>Product Details</th>
+      <th>Product Price</th>
+      <th>Action</th>
+    </tr>
+    <tbody id="rec"></tbody>
+  </table>
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>

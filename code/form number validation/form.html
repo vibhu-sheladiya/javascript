@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            padding: 10px 50px;
+        }
+
+        .lname {
+            color: darkmagenta;
+
+        }
+
+        .design {
+            font-size: 20px;
+        }
+
+        .hclass {
+            margin: 20px;
+            width: 560px;
+            border: 1px solid brown
+        }
+
+        .design input {
+            width: 12%;
+            padding: 12px 30px;
+            border: 1px solid blue;
+            margin: 14px;
+            font-size: 15px;
+        }
+
+        .bname {
+            font-size: 20px;
+            color: darkmagenta;
+        }
+
+        .buname {
+            background-color: antiquewhite;
+            color: darkmagenta;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="lname">LOGIN FORM</h2><br>
+    <form name="myform" onsubmit="return validateform()">
+        <div class="design" id="mainname">
+            <b class="bname">Name:</b> <input type="text" name="fnname" class="clear"
+                placeholder="Enter Your Full Name "><br>
+            <hr class="hclass">
+
+            <b class="bname">Number:</b><input type="tel" name="phone" maxlength="10" class="clear"
+                placeholder="Enter Your Valid Mobile Number"><br>
+            <hr class="hclass">
+            <input type="submit" value="submit" class="buname">
+            <input type="reset" value="Reset" class="buname" onclick="clearform()">
+        </div>
+    </form>
+    <script>
+        function clearform() {
+            document.getElementsByClassName("clear").value = " ";
+        }
+        function validateform() {
+            let x = document.forms['myform']['fnname'].value;
+            var comparison_char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz''";
+
+            // Name validation used ternory operator...
+            (x == "") ? alert("name must be filled out name") : (!isNaN(x)) ? alert("charcter must be requried") : (x.length < 4) ? alert("4 charcter must be atleast requried") : (x.length > 10) ? alert("must be less than 10") : console.log('name', x);
+         
+            // Phone validation used ternory operator...
+            let y = document.forms['myform']['phone'].value;
+            (y == "")? alert("must be filled out number") : (y.length != 10)? alert("please you must be enter number at least 10 but not greter than 10"):(isNaN(y))? alert("enter must be digit"): console.log('number:', y);
+            return false;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+</head>
+
+<body>
+    <h2>01_CONSTRUCTOR</h2>
+  <h3>PLEASE OPEN CONSOLE AND THEN YOU CAN CHECK OR SEE OUTPUT</h3> 
+ <script>
+function personAdd(first,course,age,lan){
+    this.name =first,
+    this.course=course,//this method
+    this.age=age,
+    this.language=lan
+}
+// carete new key word using create new object 
+const perso̥nAdd1= new personAdd('vibhu','Guj',23);//upr je index wise nakhi hoy te j nakhvi pde 
+const per̥sonAdd2= new personAdd('keshav','react',34);//new key word
+personAdd.city='bhavnagr';//add properties
+console.log("🚀 ~ file: 01_functio_ using_constructor.html:25 ~ per̥sonAdd2:NAME:", per̥sonAdd2.name);//access name with new key word with object constructor
+console.log("🚀 ~ file: 01_functio_ using_constructor.html:26 ~ per̥sonAdd1:personAdd1:", perso̥nAdd1);//ful object get
+console.log("🚀 ~ file: 01_functio_ using_constructor.html:27 ~ per̥sonAdd1:age:", perso̥nAdd1.age);// get age
+console.log("🚀 ~ file: 01_functio_ using_constructor.html:28 ~ per̥sonAdd:city:", personAdd.city);// get age
+//object with unique value access
+function person(name,course,age,language){
+    this.name ='vibhu',
+    this.course='react',
+    this.age=23,
+    this.language='eng'
+}
+// carete new key word using create newe object
+const pers̥on1= new person();
+const pe̥rson2= new person();
+console.log("🚀 ~ file: 01_functio_ using_constructor.html:39 ~ person1:name:", pers̥on1.name);// ACESS NAME
+console.log("🚀 ~ file: 01_functio_ using_constructor.html:40 ~ person1:name:", pers̥on1);//full object get
+console.log("🚀 ~ file: 01_functio_ using_constructor.html:41 ~ person1:name:", pe̥rson2);//full object get
+// Accessors (Getters and Setters){get }
+const   otherperson={
+first:'vibhu',
+lname:'joe',
+language:'No',
+set lang(value){//accessors method set and get
+    this.language=value;
+}
+};
+otherperson.lang="Eng";
+console.log("otherperson: language:-",otherperson.language);
+// setters Accessors
+const   otherperson1={
+first:'vibhu',
+lname:'joe',
+language:'No',
+get lang(){
+    this.language;
+}
+};
+otherperson1.lang="Eng";
+// console.log("hi",otherperson1.language);
+
+// cass with constructor
+class car{
+    // constructor property for object
+    constructor(name,year){
+        this.name=name;
+        this.year=year;
+    }
+    // function with argument
+    age(x){
+        return x- this.year;
+    }
+}
+// get date
+const data =new Date();
+// date to year
+let year=data.getFullYear();
+// create new object
+const myCar=new car("ford",2010);
+console.log(myCar.age(year));
+console.log(myCar);
+
+    </script>
+</body>
+
+</html>
